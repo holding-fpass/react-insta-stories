@@ -53,7 +53,6 @@ export const renderer: Renderer = ({ story, action, isPaused, config, messageHan
                 <video
                     ref={vid}
                     style={computedStyles}
-                    src={story.url}
                     controls={false}
                     onLoadedData={videoLoaded}
                     playsInline
@@ -62,7 +61,9 @@ export const renderer: Renderer = ({ story, action, isPaused, config, messageHan
                     muted={muted}
                     autoPlay
                     webkit-playsinline="true"
-                />
+                >
+                    <source src={story.url} />
+                </video>
                 {!loaded && (
                     <div
                         style={{
