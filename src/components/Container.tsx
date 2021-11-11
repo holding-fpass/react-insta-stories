@@ -155,6 +155,7 @@ const styles = {
         position: 'absolute',
         height: 'inherit',
         width: 'inherit',
-        display: 'flex'
+        display: 'flex',
+        justifyContent: 'center'
     }
 }
